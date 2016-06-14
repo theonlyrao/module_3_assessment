@@ -4,7 +4,9 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'spec_helper'
 require 'capybara/rails'
 require 'rspec/rails'
-# require 'webmock/rspec'
+#require 'webmock/rspec' => if this causes problem use WebMock.disable!
+require "vcr"
+
 Capybara.ignore_hidden_elements = false
 
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
@@ -27,4 +29,10 @@ RSpec.configure do |config|
       DatabaseCleaner.clean
     end
   end
+end
+
+
+VCR.configure do |config|
+  config.cassette_library_dir = "fixtures/vcr_cassettes"
+  config.hook_into :webmock # or :fakeweb
 end

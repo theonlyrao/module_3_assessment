@@ -1,12 +1,50 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ashwin/Turing/storedom/spec/models/item_spec.rb": [
+      "/Users/ashwin/Turing/storedom/spec/features/displays_items_spec.rb": [
         1,
         null,
         1,
-        2,
-        2,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/ashwin/Turing/storedom/spec/rails_helper.rb": [
@@ -15,6 +53,8 @@
         1,
         1,
         1,
+        1,
+        null,
         1,
         null,
         1,
@@ -39,6 +79,12 @@
         1,
         null,
         null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
         null
       ],
       "/Users/ashwin/Turing/storedom/config/environment.rb": [
@@ -196,8 +242,8 @@
       "/Users/ashwin/Turing/storedom/spec/factories/items.rb": [
         1,
         1,
-        2,
-        2,
+        4,
+        4,
         1,
         1,
         1,
@@ -265,25 +311,25 @@
         null,
         null,
         1,
-        2,
+        4,
         null,
         null,
         1,
         null,
-        0,
-        0,
-        0,
+        4,
+        4,
+        4,
         null,
         0,
         null,
         null,
         null,
         1,
-        2,
+        4,
         null,
         null,
         1,
-        2,
+        4,
         null,
         null,
         null
@@ -303,21 +349,25 @@
         1,
         null
       ],
-      "/Users/ashwin/Turing/storedom/app/models/order_item.rb": [
+      "/Users/ashwin/Turing/storedom/app/controllers/items_controller.rb": [
         1,
-        1,
-        1,
-        null
-      ],
-      "/Users/ashwin/Turing/storedom/app/models/order.rb": [
         1,
         1,
         null,
+        null,
         1,
+        0,
+        null,
+        null
+      ],
+      "/Users/ashwin/Turing/storedom/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
         1,
         null
       ]
     },
-    "timestamp": 1465874740
+    "timestamp": 1465881613
   }
 }
