@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.bestbuy.com/stores(postalCode=80202)?apiKey=hhp47b5bvjda7pj44gsauf78&format=json&show=longName%2Ccity%2Cdistance%2Cphone%2CstoreType
+    uri: https://api.bestbuy.com/v1/stores(area(80202,10)?apiKey=hhp47b5bvjda7pj44gsauf78&format=json&pageSize=15&show=longName%2Ccity%2Cdistance%2Cphone%2CstoreType
     body:
       encoding: US-ASCII
       string: ''
@@ -11,26 +11,51 @@ http_interactions:
       - Faraday v0.9.2
   response:
     status:
-      code: 404
+      code: 400
       message: 
     headers:
       content-type:
-      - text/html;charset=utf-8
+      - application/json; charset=UTF-8
       date:
-      - Tue, 14 Jun 2016 16:43:55 GMT
+      - Tue, 14 Jun 2016 17:00:26 GMT
       server:
       - thin 1.6.1 codename Death Proof
-      x-cascade:
-      - pass
       x-mashery-responder:
-      - prod-j-worker-us-east-1e-114.mashery.com
+      - prod-j-worker-us-east-1d-119.mashery.com
       content-length:
-      - '18'
+      - '2929'
       connection:
       - Close
     body:
       encoding: UTF-8
-      string: "<h1>Not Found</h1>"
+      string: |-
+        {
+          "error": {
+            "code": 400,
+            "status": "400 Bad Request",
+            "message": "Couldn't understand '/v1/stores(area(80202,10)?apiKey=hhp47b5bvjda7pj44gsauf78&format=json&pageSize=15&show=longName,city,distance,phone,storeType': Failed at character 26.",
+            "examples": [
+              "/v1/products/8880044.xml?apiKey=<YourApiKey> : Get product information for sku 8880044; display as XML",
+              "/v1/stores/187.json?apiKey=<YourApiKey> : Get information for store 187; display as JSON",
+              "/v1/reviews/2242984.json?callback=MyCallback&apiKey=<YourApiKey> : Get review 2242984; display as JSON, with callback function MyCallback",
+              "/v1/products?apiKey=<YourApiKey> : Get all products; show the first 10, sorted by name, display default attributes, formatted as xml",
+              "/v1/products?facet=manufacturer,10&apiKey=<YourApiKey> : Get all products; show the first 10, sorted by name, display default attributes, formatted as xml, and display up to 10 facets based on the \"manufacturer\" field.",
+              "/v1/products?pageSize=50&page=4&apiKey=<YourApiKey> : Get page 4 of all products, 50 products per page",
+              "/v1/products?show=sku,name,salePrice&apiKey=<YourApiKey> : Get all products, display only sku, name, and SalePrice for each",
+              "/v1/products?sort=regularPrice.desc&apiKey=<YourApiKey> : Get all products, sort descending by regular price (most expensive first)",
+              "/v1/products(manufacturer=canon)?apiKey=<YourApiKey> : Get all products manufactured by Canon",
+              "/v1/products(salePrice<299.99)?apiKey=<YourApiKey> : Get all products whose sale price is less than $299.99",
+              "/v1/products(manufacturer=canon&salePrice<299.99)?apiKey=<YourApiKey> : Get Canon products with sale price less than $299.99",
+              "/v1/products(sku in(9909482,1221963,9491935))?apiKey=<YourApiKey> : Get products whose sku is in the list (9909482,1221963,9491935)",
+              "/v1/products(wifiReady=true|wifiBuiltIn=true)?apiKey=<YourApiKey> : Get products that are either Wi-Fi ready, OR have Wi-Fi built in",
+              "/v1/products(name=castlevania*)?apiKey=<YourApiKey> : Get physical (not downloadable) products with \"castlevania\" in name",
+              "/v1/products(name=castlevania*&digital=true)?apiKey=<YourApiKey> : Get downloadable products with \"castlevania\" in name",
+              "/v1/products(name=castlevania*&digital=*)?apiKey=<YourApiKey> : Get products, physical or downloadable, with \"castlevania\" in name",
+              "/v1/stores(area(55423,10))?show=storeId,name,hours,distance&apiKey=<YourApiKey> : Get stores within 10 miles of zip code 55423; show store number, name, store hours, and distance from zip code reference point",
+              "/v1/stores(area(55423,10))+products(sku in(9909482,1221963,9491935))?show=storeId,name,products.sku,products.name&apiKey=<YourApiKey> : Get stores within 10 miles of zip code 55423, and show which skus, of 9909482, 1221963, or 9491935, each store has in stock"
+            ]
+          }
+        }
     http_version: 
-  recorded_at: Tue, 14 Jun 2016 16:43:56 GMT
+  recorded_at: Tue, 14 Jun 2016 17:00:26 GMT
 recorded_with: VCR 3.0.3
