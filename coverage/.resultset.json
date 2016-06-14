@@ -23,8 +23,16 @@
         null,
         1,
         null,
-        0,
+        1,
         null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         null,
@@ -252,6 +260,7 @@
         null,
         null,
         1,
+        null,
         null
       ],
       "/Users/ashwin/Turing/storedom/app/helpers/application_helper.rb": [
@@ -358,7 +367,7 @@
         1,
         null
       ],
-      "/Users/ashwin/Turing/storedom/app/controllers/stores_controller.rb": [
+      "/Users/ashwin/Turing/storedom/app/controllers/search_controller.rb": [
         1,
         null,
         1,
@@ -420,6 +429,6 @@
         null
       ]
     },
-    "timestamp": 1465925285
+    "timestamp": 1465926309
   }
 }

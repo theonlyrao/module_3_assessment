@@ -12,7 +12,6 @@ Rails.application.routes.draw do
     post "/v1/items", to: "v1/items#create"
   end
 
-  get "/stores", to: "stores#index", as: :stores
-
   get "/search", to: "search#show", as: :search
+
 end

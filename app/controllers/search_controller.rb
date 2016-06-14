@@ -1,6 +1,6 @@
-class StoresController < ApplicationController
+class SearchController < ApplicationController
 
-  def index
+  def show
     @stores = Store.find_all_by_zip(params[:zip])
   end
 

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T11:28:05-06:00">2016-06-14T11:28:05-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T11:45:09-06:00">2016-06-14T11:45:09-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.96%</span></span>
+    (<span class="covered_percent"><span class="green">95.42%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.59
+         1.54
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>29</b> files in total.
-    <b>147</b> relevant lines. 
-    <span class="green"><b>144</b> lines covered</span> and
-    <span class="red"><b>3</b> lines missed </span>
+    <b>153</b> relevant lines. 
+    <span class="green"><b>146</b> lines covered</span> and
+    <span class="red"><b>7</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -61,7 +61,7 @@
       </tr>
       
       <tr>
-        <td class="strong"><a href="#9ae8b75fbc276f62819f91a0a8c954c100c75730" class="src_link" title="app/controllers/stores_controller.rb">app/controllers/stores_controller.rb</a></td>
+        <td class="strong"><a href="#a904aea3a66d93011081d2e9c561f908151f0168" class="src_link" title="app/controllers/search_controller.rb">app/controllers/search_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>7</td>
         <td>3</td>
@@ -273,7 +273,7 @@
       <tr>
         <td class="strong"><a href="#180833b818c0a62f4ec7e3cc1b795fe5c7611fe3" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>16</td>
+        <td>17</td>
         <td>11</td>
         <td>11</td>
         <td>0</td>
@@ -292,12 +292,12 @@
       
       <tr>
         <td class="strong"><a href="#18c7708ba1684badd7dfb89bfcbff3eeb680e2d2" class="src_link" title="spec/features/user_can_search_stores_spec.rb">spec/features/user_can_search_stores_spec.rb</a></td>
-        <td class="green strong">90.91 %</td>
-        <td>29</td>
-        <td>11</td>
-        <td>10</td>
-        <td>1</td>
-        <td>0.9</td>
+        <td class="red strong">70.59 %</td>
+        <td>37</td>
+        <td>17</td>
+        <td>12</td>
+        <td>5</td>
+        <td>0.7</td>
       </tr>
       
       <tr>
@@ -404,9 +404,9 @@
   </pre>
 </div>
       
-        <div class="source_table" id="9ae8b75fbc276f62819f91a0a8c954c100c75730">
+        <div class="source_table" id="a904aea3a66d93011081d2e9c561f908151f0168">
   <div class="header">
-    <h3>app/controllers/stores_controller.rb</h3>
+    <h3>app/controllers/search_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>3</b> relevant lines. 
@@ -421,7 +421,7 @@
         <li class="covered" data-hits="1" data-linenumber="1">
           <span class="hits">1</span>
           
-          <code class="ruby">class StoresController &lt; ApplicationController</code>
+          <code class="ruby">class SearchController &lt; ApplicationController</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="2">
@@ -433,7 +433,7 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def index</code>
+          <code class="ruby">  def show</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="4">
@@ -2089,10 +2089,16 @@
         <li class="covered" data-hits="1" data-linenumber="15">
           <span class="hits">1</span>
           
-          <code class="ruby">  get &quot;/stores&quot;, to: &quot;stores#index&quot;, as: :stores</code>
+          <code class="ruby">  get &quot;/search&quot;, to: &quot;search#show&quot;, as: :search</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby">end</code>
@@ -2183,11 +2189,11 @@
         <div class="source_table" id="18c7708ba1684badd7dfb89bfcbff3eeb680e2d2">
   <div class="header">
     <h3>spec/features/user_can_search_stores_spec.rb</h3>
-    <h4><span class="green">90.91 %</span> covered</h4>
+    <h4><span class="red">70.59 %</span> covered</h4>
     <div>
-      <b>11</b> relevant lines. 
-      <span class="green"><b>10</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>17</b> relevant lines. 
+      <span class="green"><b>12</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -2320,8 +2326,8 @@
           <code class="ruby">        # And I should see stores within 25 miles of 80202</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="22">
-          
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
           
           <code class="ruby">        expect(page).to have_content(&quot;17 Total Stores&quot;)</code>
         </li>
@@ -2344,25 +2350,73 @@
           <code class="ruby">        # The name will be a link in the next story:</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        within &quot;.store-1&quot; do</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="27">
+          
+          
+          <code class="ruby">          expect(page).to have_link(&quot;Best Buy Mobile - Cherry Creek Shopping Center&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="28">
+          
+          
+          <code class="ruby">          expect(page).to have_content(&quot;Denver&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="29">
+          
+          
+          <code class="ruby">          expect(page).to have_content(&quot;3.25&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="30">
+          
+          
+          <code class="ruby">          expect(page).to have_content(&quot;303-270-9189&quot;)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="31">
+          
+          
+          <code class="ruby">          expect(page).to have_content(&quot;Mobile&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="33">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="34">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
+        <li class="never" data-hits="" data-linenumber="35">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="28">
+        <li class="never" data-hits="" data-linenumber="36">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby">end</code>

@@ -1,3 +1,18 @@
 <h1>Search Show Page</h1>
 
 <p><%= @stores[:total] %> Total Stores</p>
+
+<div class="store-list">
+    <% @stores[:stores].each do |store| %>%>
+	<div class=""
+	<ul>
+	    <li>Name: <%= link_to store.long_name, "#" %></li>
+	    <li>City: store.city</li>
+	    <li>Distance: store.distance</li>
+	    <li>Phone: store.phone</li>
+	    <li>Store Type: store.store_type</li>
+	</ul>
+	<br>
+	</div> <!-- store -->
+    <% end %>
+</div> <!-- store-list -->
