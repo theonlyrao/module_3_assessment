@@ -14,4 +14,6 @@ Rails.application.routes.draw do
 
   get "/search", to: "search#show", as: :search
 
+  get "/stores/:long_name", to: "stores#show", as: :store
+
 end

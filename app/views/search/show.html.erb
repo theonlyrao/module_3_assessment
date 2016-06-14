@@ -6,7 +6,7 @@
     <% @stores[:stores].each_with_index do |store, index| %>
 	<div class="store-<%=index + 1%>">
 	<ul>
-	    <li>Name: <%= link_to store.long_name, "#" %></li>
+	    <li>Name: <%= link_to store.long_name, store_path(store.long_name) %></li>
 	    <li>City: <%= store.city %></li>
 	    <li>Distance: <%= store.distance %></li>
 	    <li>Phone: <%= store.phone %></li>
