@@ -3,14 +3,14 @@
 <p><%= @stores[:total] %> Total Stores</p>
 
 <div class="store-list">
-    <% @stores[:stores].each do |store| %>%>
-	<div class=""
+    <% @stores[:stores].each_with_index do |store, index| %>
+	<div class="store-<%=index + 1%>">
 	<ul>
 	    <li>Name: <%= link_to store.long_name, "#" %></li>
-	    <li>City: store.city</li>
-	    <li>Distance: store.distance</li>
-	    <li>Phone: store.phone</li>
-	    <li>Store Type: store.store_type</li>
+	    <li>City: <%= store.city %></li>
+	    <li>Distance: <%= store.distance %></li>
+	    <li>Phone: <%= store.phone %></li>
+	    <li>Store Type: <%= store.store_type %></li>
 	</ul>
 	<br>
 	</div> <!-- store -->

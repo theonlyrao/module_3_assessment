@@ -7,14 +7,6 @@ RSpec.feature "DisplaysItems", type: :feature do
     item_two = create(:item)
     expect(Item.count).to eq(2)
   end
-  it "can reach the root page" do
-    expect(Item.count).to eq(0)
-    visit root_path
-
-    within ("h1") do
-      expect(page).to have_content("Items")
-    end
-  end
 
   it "uses vcr properly" do
     VCR.use_cassette("VCR_test") do
