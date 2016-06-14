@@ -60,7 +60,7 @@
         1,
         null,
         1,
-        0,
+        1,
         0,
         0,
         null,
@@ -387,6 +387,11 @@
         1,
         null,
         null,
+        1,
+        1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/ashwin/Turing/storedom/app/controllers/api_controller.rb": [
@@ -400,6 +405,6 @@
         null
       ]
     },
-    "timestamp": 1465918409
+    "timestamp": 1465918641
   }
 }
