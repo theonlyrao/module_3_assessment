@@ -61,4 +61,22 @@ RSpec.describe "ApiV1Items", type: :request do
     end
   end
 
+  describe "POST /api/v1/items" do
+    it "creates item and sends response" do
+      #When I send a POST request to /api/v1/items with a name, description, and image_url I receive a 201 JSON response if the record is successfully created And I receive a JSON response containing the name, description, and image_url but not the created_at or updated_at
+      expect(Item.count).to eq(0)
+
+      post "api/v1/items", item: { name: "test_name", description: "test_description", image_url: "test_image" }
+      
+      expect(Item.count).to eq(1)
+      expect(response).to have_http_status(201)
+      item = JSON.parse(response.body)
+      expect(item["name"]).to eq("test_name")
+      expect(item["description"]).to eq("test_description")
+      expect(item["image_url"]).to eq ("test_image")
+      expect(item["created_at"]).to be_nil
+      expect(item["updated_at"]).to be_nil
+    end
+  end
+
 end
