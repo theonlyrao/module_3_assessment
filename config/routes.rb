@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     get "/v1/items", to: "v1/items#index"
     get "/v1/items/:id", to: "v1/items#show"
     delete "/v1/items/:id", to: "v1/items#destroy"
+    post "/v1/items", to: "v1/items#create"
   end
 end

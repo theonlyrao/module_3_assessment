@@ -13,4 +13,14 @@ class Api::V1::ItemsController < ApiController
     render json: {}, status: :no_content
   end
 
+  def create
+    respond_with Item.create!(item_params)
+  end
+
+  private
+
+  def item_params
+    params.require(:item).permit(:name, :description, :image_url)
+  end
+  
 end
