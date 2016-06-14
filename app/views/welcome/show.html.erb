@@ -1,0 +1,12 @@
+<h1>Welcome Show Page AKA Root Path</h1>
+
+<div class="search-box">
+    <%= form_tag stores_path, method: "get" do %>
+	<p>
+	    
+	<%= text_field_tag :zip, params[:search],  %>
+	<%= submit_tag "Search", name: nil %>
+    </p>
+    <% end %>
+
+</div>

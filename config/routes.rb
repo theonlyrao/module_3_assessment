@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'items#index'
+  root 'welcome#show'
 
   resources :items,  only: [:index, :show]
   resources :orders, only: [:index, :show]
@@ -11,4 +11,6 @@ Rails.application.routes.draw do
     delete "/v1/items/:id", to: "v1/items#destroy"
     post "/v1/items", to: "v1/items#create"
   end
+
+  get "/stores", to: "stores#index", as: :stores
 end
