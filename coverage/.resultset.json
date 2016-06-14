@@ -1,35 +1,19 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/ashwin/Turing/storedom/spec/features/user_can_search_stores_spec.rb": [
+      "/Users/ashwin/Turing/storedom/spec/models/store_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        1,
         null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        1,
-        1,
-        1,
         1,
         0,
-        null,
-        null,
         0,
-        null,
         0,
-        null,
-        null,
-        null,
-        null,
-        null,
+        0,
+        0,
         null,
         null
       ],
@@ -237,6 +221,13 @@
         null,
         null
       ],
+      "/Users/ashwin/Turing/storedom/spec/factories/stores.rb": [
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/ashwin/Turing/storedom/config/routes.rb": [
         1,
         1,
@@ -311,9 +302,9 @@
         null,
         1,
         null,
-        1,
-        1,
-        1,
+        0,
+        0,
+        0,
         null,
         0,
         null,
@@ -338,28 +329,40 @@
         null,
         null
       ],
+      "/Users/ashwin/Turing/storedom/app/models/store.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
+      ],
       "/Users/ashwin/Turing/storedom/app/models/item.rb": [
         1,
         1,
         1,
         null
       ],
-      "/Users/ashwin/Turing/storedom/app/controllers/welcome_controller.rb": [
+      "/Users/ashwin/Turing/storedom/app/services/best_buy_service.rb": [
         1,
         null,
         1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
-        null
-      ],
-      "/Users/ashwin/Turing/storedom/app/controllers/application_controller.rb": [
+        null,
         1,
         null,
         null,
-        1,
+        null,
+        null,
+        null,
         null
       ]
     },
-    "timestamp": 1465920898
+    "timestamp": 1465921657
   }
 }

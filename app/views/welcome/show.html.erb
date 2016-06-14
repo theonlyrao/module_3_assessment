@@ -3,8 +3,8 @@
 <div class="search-box">
     <%= form_tag stores_path, method: "get" do %>
 	<p>
-	    
-	<%= text_field_tag :zip, params[:search],  %>
+	    <%= label_tag :zip, "Zip" %>
+	<%= text_field_tag :zip, params[:zip] %>
 	<%= submit_tag "Search", name: nil %>
     </p>
     <% end %>

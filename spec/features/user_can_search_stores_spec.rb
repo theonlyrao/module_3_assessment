@@ -12,7 +12,6 @@ RSpec.feature "UserCanSearchStores", type: :feature do
 # And I should see a message that says "17 Total Stores"
 
         visit root_path
-        save_and_open_page
         within ".search-box" do
           fill_in "Zip", with: "80202"
           click_on "Search"
