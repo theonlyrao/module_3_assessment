@@ -20,6 +20,46 @@ RSpec.describe "ApiV1Items", type: :request do
       expect(first_item["name"]).to eq(target.name)
       expect(first_item["description"]).to eq(target.description)
       expect(first_item["image_url"]).to eq (target.image_url)
-      expect(first_item["image
+      expect(first_item["created_at"]).to be_nil
+      expect(first_item["updated_at"]).to be_nil
+    end
   end
+
+  describe "GET /api/v1/items/1" do
+    it "sends back only requested item" do
+      #When I send a GET request to /api/v1/items/1 I receive a 200 JSON response containing the name, description, and image_url but not the created_at or updated_at
+      10.times do |n|
+        create(:item)
+      end
+
+      target = Item.find(1)
+
+      get "/api/v1/items/1"
+      item = JSON.parse(response.body)
+      expect(response).to have_http_status(200)
+      expect(item["name"]).to eq(target.name)
+      expect(item["description"]).to eq(target.description)
+      expect(item["image_url"]).to eq (target.image_url)
+      expect(item["created_at"]).to be_nil
+      expect(item["updated_at"]).to be_nil
+    end
+  end
+
+  describe "DELETE /api/v1/items/1" do
+#When I send a DELETE request to /api/v1/items/1 I receive a 204 JSON response if the record is successfully deleted
+    it "deletes specified item" do
+  
+      10.times do |n|
+        create(:item)
+      end
+
+      target = Item.find(1)
+
+      delete "/api/v1/items/1"
+      result = JSON.parse(response.body)
+      expect(result).to have_http_status(204)
+      expect(Item.find(1)).to be_nil
+    end
+  end
+
 end
