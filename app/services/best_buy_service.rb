@@ -1,5 +1,7 @@
 class BestBuyService
 
+  attr_reader :conn, :key
+  
   def initialize
     @conn = Faraday.new(:url => 'https://api.bestbuy.com/v1') do |faraday|
       faraday.request  :url_encoded      
@@ -10,9 +12,12 @@ class BestBuyService
   end
 
   def self.stores_by_zip(zip_code)
-    @conn.get do |req|
-      req.url '/search'
-      req.params['limit'] = 100
+    service = BestBuyService.new
+    service.conn.get do |req|
+      req.url "/stores(postalCode=#{zip_code})"
+      req.params["format"] = "json"
+      req.params["show"] = "longName,city,distance,phone,storeType"
+      req.params["apiKey"] = ENV["BEST_BUY_KEY"]
     end
   end
 

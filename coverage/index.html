@@ -5,7 +5,7 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <script src='./assets/0.10.0/application.js' type='text/javascript'></script>    
     <link href='./assets/0.10.0/application.css' media='screen, projection, print' rel='stylesheet' type='text/css'>
-    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_yellow.png" />
+    <link rel="shortcut icon" type="image/png" href="./assets/0.10.0/favicon_green.png" />
     <link rel="icon" type="image/png" href="./assets/0.10.0/favicon.png" />
   </head>
   
@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T10:27:37-06:00">2016-06-14T10:27:37-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T10:43:56-06:00">2016-06-14T10:43:56-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="yellow">88.43%</span></span>
+    (<span class="covered_percent"><span class="green">92.31%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.92
+         0.95
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>27</b> files in total.
-    <b>121</b> relevant lines. 
-    <span class="green"><b>107</b> lines covered</span> and
-    <span class="red"><b>14</b> lines missed </span>
+    <b>130</b> relevant lines. 
+    <span class="green"><b>120</b> lines covered</span> and
+    <span class="red"><b>10</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -112,12 +112,12 @@
       
       <tr>
         <td class="strong"><a href="#ebb8ea238e23b3e655e8cebe2a8110e035dc4bc9" class="src_link" title="app/services/best_buy_service.rb">app/services/best_buy_service.rb</a></td>
-        <td class="red strong">42.86 %</td>
-        <td>17</td>
-        <td>7</td>
-        <td>3</td>
-        <td>4</td>
-        <td>0.4</td>
+        <td class="green strong">100.0 %</td>
+        <td>26</td>
+        <td>15</td>
+        <td>15</td>
+        <td>0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -272,10 +272,10 @@
       
       <tr>
         <td class="strong"><a href="#adc9c682d396e45d1b94f955515531c33319f97a" class="src_link" title="spec/models/store_spec.rb">spec/models/store_spec.rb</a></td>
-        <td class="red strong">50.0 %</td>
-        <td>14</td>
-        <td>10</td>
-        <td>5</td>
+        <td class="red strong">54.55 %</td>
+        <td>16</td>
+        <td>11</td>
+        <td>6</td>
         <td>5</td>
         <td>0.5</td>
       </tr>
@@ -555,11 +555,11 @@
         <div class="source_table" id="ebb8ea238e23b3e655e8cebe2a8110e035dc4bc9">
   <div class="header">
     <h3>app/services/best_buy_service.rb</h3>
-    <h4><span class="red">42.86 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>4</b> lines missed.</span>
+      <b>15</b> relevant lines. 
+      <span class="green"><b>15</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -581,88 +581,142 @@
         <li class="covered" data-hits="1" data-linenumber="3">
           <span class="hits">1</span>
           
-          <code class="ruby">  def initialize</code>
+          <code class="ruby">  attr_reader :conn, :key</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="4">
-          
-          
-          <code class="ruby">    @conn = Faraday.new(:url =&gt; &#39;https://api.bestbuy.com/v1&#39;) do |faraday|</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="5">
-          
-          
-          <code class="ruby">      faraday.request  :url_encoded      </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="6">
-          
-          
-          <code class="ruby">      faraday.response :logger           </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="7">
-          
-          
-          <code class="ruby">      faraday.adapter  Faraday.default_adapter</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="8">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="9">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="10">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="11">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def self.stores_by_zip(zip_code)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="12">
-          
-          
-          <code class="ruby">    </code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="13">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="14">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="15">
+        <li class="never" data-hits="" data-linenumber="4">
           
           
           <code class="ruby">  </code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def initialize</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @conn = Faraday.new(:url =&gt; &#39;https://api.bestbuy.com/v1&#39;) do |faraday|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      faraday.request  :url_encoded      </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      faraday.response :logger           </code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      faraday.adapter  Faraday.default_adapter</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @key = ENV[&quot;BEST_BUY_KEY&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="14">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.stores_by_zip(zip_code)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    service = BestBuyService.new</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    service.conn.get do |req|</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      req.url &quot;/stores(postalCode=#{zip_code})&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      req.params[&quot;format&quot;] = &quot;json&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      req.params[&quot;show&quot;] = &quot;longName,city,distance,phone,storeType&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      req.params[&quot;apiKey&quot;] = ENV[&quot;BEST_BUY_KEY&quot;]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="24">
+          
+          
+          <code class="ruby">  </code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="25">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby">end</code>
@@ -1899,10 +1953,10 @@
         <div class="source_table" id="adc9c682d396e45d1b94f955515531c33319f97a">
   <div class="header">
     <h3>spec/models/store_spec.rb</h3>
-    <h4><span class="red">50.0 %</span> covered</h4>
+    <h4><span class="red">54.55 %</span> covered</h4>
     <div>
-      <b>10</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>11</b> relevant lines. 
+      <span class="green"><b>6</b> lines covered</span> and
       <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
@@ -1937,58 +1991,70 @@
         <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
-          <code class="ruby">    stores = Store.find_all_by_zip(&quot;80202&quot;)</code>
+          <code class="ruby">    VCR.use_cassette &quot;model_store_can_get_all_in_zip&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      stores = Store.find_all_by_zip(&quot;80202&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="7">
+        <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(stores.count).to eq(17)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="8">
-          
-          
-          <code class="ruby">    expect(stores.first.name).to eq(&quot;a name&quot;)</code>
+          <code class="ruby">      expect(stores.count).to eq(17)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="9">
           
           
-          <code class="ruby">    expect(stores.first.city).to eq(&quot;a city&quot;)</code>
+          <code class="ruby">      expect(stores.first.name).to eq(&quot;a name&quot;)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="10">
           
           
-          <code class="ruby">    expect(stores.first.distance).to eq(&quot;a distance&quot;)</code>
+          <code class="ruby">      expect(stores.first.city).to eq(&quot;a city&quot;)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="11">
           
           
-          <code class="ruby">    expect(stores.first.distance).to eq(&quot;a phone&quot;)</code>
+          <code class="ruby">      expect(stores.first.distance).to eq(&quot;a distance&quot;)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="12">
           
           
-          <code class="ruby">    expect(stores.first.disatnce).to eq(&quot;a type&quot;)</code>
+          <code class="ruby">      expect(stores.first.distance).to eq(&quot;a phone&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="missed" data-hits="0" data-linenumber="13">
+          
+          
+          <code class="ruby">      expect(stores.first.disatnce).to eq(&quot;a type&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="14">
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>

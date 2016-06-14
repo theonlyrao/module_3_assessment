@@ -1,0 +1,36 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.bestbuy.com/stores(postalCode=80202)?apiKey=hhp47b5bvjda7pj44gsauf78&format=json&show=longName%2Ccity%2Cdistance%2Cphone%2CstoreType
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.9.2
+  response:
+    status:
+      code: 404
+      message: 
+    headers:
+      content-type:
+      - text/html;charset=utf-8
+      date:
+      - Tue, 14 Jun 2016 16:44:21 GMT
+      server:
+      - thin 1.6.1 codename Death Proof
+      x-cascade:
+      - pass
+      x-mashery-responder:
+      - prod-j-worker-us-east-1e-105.mashery.com
+      content-length:
+      - '18'
+      connection:
+      - Close
+    body:
+      encoding: UTF-8
+      string: "<h1>Not Found</h1>"
+    http_version: 
+  recorded_at: Tue, 14 Jun 2016 16:44:21 GMT
+recorded_with: VCR 3.0.3
