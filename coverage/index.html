@@ -14,14 +14,14 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T11:00:37-06:00">2016-06-14T11:00:37-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T11:10:54-06:00">2016-06-14T11:10:54-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">90.98%</span></span>
+    (<span class="covered_percent"><span class="green">90.37%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
@@ -32,9 +32,9 @@
   <a name="AllFiles"></a>
   <div>
     <b>27</b> files in total.
-    <b>133</b> relevant lines. 
-    <span class="green"><b>121</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>135</b> relevant lines. 
+    <span class="green"><b>122</b> lines covered</span> and
+    <span class="red"><b>13</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -102,18 +102,18 @@
       
       <tr>
         <td class="strong"><a href="#e7f4016703a4e00b29dc873fffcc0b120ab56b8e" class="src_link" title="app/models/store.rb">app/models/store.rb</a></td>
-        <td class="green strong">100.0 %</td>
+        <td class="red strong">66.67 %</td>
+        <td>10</td>
         <td>6</td>
-        <td>3</td>
-        <td>3</td>
-        <td>0</td>
-        <td>1.0</td>
+        <td>4</td>
+        <td>2</td>
+        <td>0.7</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#ebb8ea238e23b3e655e8cebe2a8110e035dc4bc9" class="src_link" title="app/services/best_buy_service.rb">app/services/best_buy_service.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>27</td>
+        <td>28</td>
         <td>17</td>
         <td>17</td>
         <td>0</td>
@@ -272,12 +272,12 @@
       
       <tr>
         <td class="strong"><a href="#adc9c682d396e45d1b94f955515531c33319f97a" class="src_link" title="spec/models/store_spec.rb">spec/models/store_spec.rb</a></td>
-        <td class="red strong">41.67 %</td>
+        <td class="red strong">45.45 %</td>
         <td>16</td>
-        <td>12</td>
+        <td>11</td>
         <td>5</td>
-        <td>7</td>
-        <td>0.4</td>
+        <td>6</td>
+        <td>0.5</td>
       </tr>
       
       <tr>
@@ -501,11 +501,11 @@
         <div class="source_table" id="e7f4016703a4e00b29dc873fffcc0b120ab56b8e">
   <div class="header">
     <h3>app/models/store.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
+    <h4><span class="red">66.67 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
+      <b>6</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
+      <span class="red"><b>2</b> lines missed.</span>
     </div>
   </div>
   
@@ -533,16 +533,40 @@
         <li class="covered" data-hits="1" data-linenumber="4">
           <span class="hits">1</span>
           
-          <code class="ruby">    BestBuyService.stores_by_zip(zip_code)</code>
+          <code class="ruby">    raw_stores = BestBuyService.stores_by_zip(zip_code)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    stores = raw_stores[:stores].each do |raw_store|</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="6">
+          
+          
+          <code class="ruby">      Store.new(raw_store)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="7">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="8">
+          
+          
+          <code class="ruby">    byebug</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="6">
+        <li class="never" data-hits="" data-linenumber="10">
           
           
           <code class="ruby">end</code>
@@ -647,7 +671,7 @@
         <li class="covered" data-hits="1" data-linenumber="14">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.stores_by_zip(zip_code, radius=10, num_per_page=15)</code>
+          <code class="ruby">  def self.stores_by_zip(zip_code, radius=25, num_per_page=15)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="15">
@@ -659,13 +683,13 @@
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">    service.conn.get do |req|</code>
+          <code class="ruby">    response = service.conn.get do |req|</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
-          <code class="ruby">      req.url &quot;v1/stores(area(#{zip_code},#{radius})&quot;</code>
+          <code class="ruby">      req.url &quot;v1/stores(area(#{zip_code},#{radius}))&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="18">
@@ -683,7 +707,7 @@
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
-          <code class="ruby">      req.params[&quot;pageSize&quot;] = num_per_page</code>
+          <code class="ruby">      req.params[&quot;pageSize&quot;] = &quot;#{num_per_page}&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="21">
@@ -701,28 +725,34 @@
         <li class="covered" data-hits="1" data-linenumber="23">
           <span class="hits">1</span>
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    JSON.parse(response.body, symbolize_keys: true)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="24">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="25">
           
           
-          <code class="ruby">  </code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="26">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  </code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="27">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">end</code>
@@ -1959,11 +1989,11 @@
         <div class="source_table" id="adc9c682d396e45d1b94f955515531c33319f97a">
   <div class="header">
     <h3>spec/models/store_spec.rb</h3>
-    <h4><span class="red">41.67 %</span> covered</h4>
+    <h4><span class="red">45.45 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
+      <b>11</b> relevant lines. 
       <span class="green"><b>5</b> lines covered</span> and
-      <span class="red"><b>7</b> lines missed.</span>
+      <span class="red"><b>6</b> lines missed.</span>
     </div>
   </div>
   
@@ -2006,10 +2036,10 @@
           <code class="ruby">      stores = Store.find_all_by_zip(&quot;80202&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="7">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
-          <code class="ruby">byebug</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="8">
