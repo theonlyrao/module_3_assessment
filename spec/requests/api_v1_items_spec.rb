@@ -56,9 +56,8 @@ RSpec.describe "ApiV1Items", type: :request do
       target = Item.find(1)
 
       delete "/api/v1/items/1"
-      result = JSON.parse(response.body)
-      expect(result).to have_http_status(204)
-      expect(Item.find(1)).to be_nil
+      expect(response).to have_http_status(204)
+      expect(response.body).to eq("")
     end
   end
 

@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T09:37:21-06:00">2016-06-14T09:37:21-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2016-06-14T09:41:45-06:00">2016-06-14T09:41:45-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">95.3%</span></span>
+    (<span class="covered_percent"><span class="green">96.62%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.62
+         1.64
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>27</b> files in total.
-    <b>149</b> relevant lines. 
-    <span class="green"><b>142</b> lines covered</span> and
-    <span class="red"><b>7</b> lines missed </span>
+    <b>148</b> relevant lines. 
+    <span class="green"><b>143</b> lines covered</span> and
+    <span class="red"><b>5</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -282,12 +282,12 @@
       
       <tr>
         <td class="strong"><a href="#94388f953769df4fea7f186b0264a97399bf7ce4" class="src_link" title="spec/requests/api_v1_items_spec.rb">spec/requests/api_v1_items_spec.rb</a></td>
-        <td class="green strong">95.0 %</td>
-        <td>65</td>
-        <td>40</td>
-        <td>38</td>
-        <td>2</td>
-        <td>1.6</td>
+        <td class="green strong">100.0 %</td>
+        <td>64</td>
+        <td>39</td>
+        <td>39</td>
+        <td>0</td>
+        <td>1.7</td>
       </tr>
       
       <tr>
@@ -2091,11 +2091,11 @@
         <div class="source_table" id="94388f953769df4fea7f186b0264a97399bf7ce4">
   <div class="header">
     <h3>spec/requests/api_v1_items_spec.rb</h3>
-    <h4><span class="green">95.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>40</b> relevant lines. 
-      <span class="green"><b>38</b> lines covered</span> and
-      <span class="red"><b>2</b> lines missed.</span>
+      <b>39</b> relevant lines. 
+      <span class="green"><b>39</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -2453,40 +2453,34 @@
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">      result = JSON.parse(response.body)</code>
+          <code class="ruby">      expect(response).to have_http_status(204)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      expect(result).to have_http_status(204)</code>
+          <code class="ruby">      expect(response.body).to eq(&quot;&quot;)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="61">
-          
-          
-          <code class="ruby">      expect(Item.find(1)).to be_nil</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="62">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="63">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="65">
+        <li class="never" data-hits="" data-linenumber="64">
           
           
           <code class="ruby">end</code>
